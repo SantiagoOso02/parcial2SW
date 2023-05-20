@@ -1,9 +1,11 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PartidoModule } from './partido/partido.module';
+import { EquipoModule } from './equipo/equipo.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,9 @@ import { PartidoModule } from './partido/partido.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PartidoModule
+    PartidoModule,
+    EquipoModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,249 @@
+<div class=containerHead>
+  <h1>Lista de equipos</h1>
+  <br>
+</div>
+<div *ngIf="selected">
+  <app-equipo-detail [equipoDetail]="selectedEquipo"></app-equipo-detail>
+ </div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="containerBody">
+      <h2>Grupo A</h2>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>Nombre de equipo</th>
+            <th>Goles a favor</th>
+            <th>Goles en contra</th>
+            <th>Diferencia de goles</th>
+            <th>Puntos</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let equipo of equiposGrupoA">
+          <tr>
+            <td (click)="onSelected(equipo)">{{equipo.name}}</td>
+            <td>{{equipo.goals_for}}</td>
+            <td>{{equipo.goals_against}}</td>
+            <td>{{equipo.goal_differential}}</td>
+            <td>{{equipo.group_points}}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+          </tr>
+      </table>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="containerBody">
+      <h2>Grupo B</h2>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>Nombre de equipo</th>
+            <th>Goles a favor</th>
+            <th>Goles en contra</th>
+            <th>Diferencia de goles</th>
+            <th>Puntos</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let equipo of equiposGrupoB">
+          <tr>
+            <td (click)="onSelected(equipo)">{{equipo.name}}</td>
+            <td>{{equipo.goals_for}}</td>
+            <td>{{equipo.goals_against}}</td>
+            <td>{{equipo.goal_differential}}</td>
+            <td>{{equipo.group_points}}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+          </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="containerBody">
+      <h2>Grupo C</h2>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>Nombre de equipo</th>
+            <th>Goles a favor</th>
+            <th>Goles en contra</th>
+            <th>Diferencia de goles</th>
+            <th>Puntos</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let equipo of equiposGrupoC">
+          <tr>
+            <td (click)="onSelected(equipo)">{{equipo.name}}</td>
+            <td>{{equipo.goals_for}}</td>
+            <td>{{equipo.goals_against}}</td>
+            <td>{{equipo.goal_differential}}</td>
+            <td>{{equipo.group_points}}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+          </tr>
+      </table>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="containerBody">
+      <h2>Grupo D</h2>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>Nombre de equipo</th>
+            <th>Goles a favor</th>
+            <th>Goles en contra</th>
+            <th>Diferencia de goles</th>
+            <th>Puntos</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let equipo of equiposGrupoD">
+          <tr>
+            <td (click)="onSelected(equipo)">{{equipo.name}}</td>
+            <td>{{equipo.goals_for}}</td>
+            <td>{{equipo.goals_against}}</td>
+            <td>{{equipo.goal_differential}}</td>
+            <td>{{equipo.group_points}}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+          </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="containerBody">
+      <h2>Grupo E</h2>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>Nombre de equipo</th>
+            <th>Goles a favor</th>
+            <th>Goles en contra</th>
+            <th>Diferencia de goles</th>
+            <th>Puntos</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let equipo of equiposGrupoE">
+          <tr>
+            <td (click)="onSelected(equipo)">{{equipo.name}}</td>
+            <td>{{equipo.goals_for}}</td>
+            <td>{{equipo.goals_against}}</td>
+            <td>{{equipo.goal_differential}}</td>
+            <td>{{equipo.group_points}}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+          </tr>
+      </table>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="containerBody">
+      <h2>Grupo F</h2>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>Nombre de equipo</th>
+            <th>Goles a favor</th>
+            <th>Goles en contra</th>
+            <th>Diferencia de goles</th>
+            <th>Puntos</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let equipo of equiposGrupoF">
+          <tr>
+            <td (click)="onSelected(equipo)">{{equipo.name}}</td>
+            <td>{{equipo.goals_for}}</td>
+            <td>{{equipo.goals_against}}</td>
+            <td>{{equipo.goal_differential}}</td>
+            <td>{{equipo.group_points}}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+          </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="containerBody">
+      <h2>Grupo G</h2>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>Nombre de equipo</th>
+            <th>Goles a favor</th>
+            <th>Goles en contra</th>
+            <th>Diferencia de goles</th>
+            <th>Puntos</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let equipo of equiposGrupoG">
+          <tr>
+            <td (click)="onSelected(equipo)">{{equipo.name}}</td>
+            <td>{{equipo.goals_for}}</td>
+            <td>{{equipo.goals_against}}</td>
+            <td>{{equipo.goal_differential}}</td>
+            <td>{{equipo.group_points}}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+          </tr>
+      </table>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="containerBody">
+      <h2>Grupo H</h2>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>Nombre de equipo</th>
+            <th>Goles a favor</th>
+            <th>Goles en contra</th>
+            <th>Diferencia de goles</th>
+            <th>Puntos</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let equipo of equiposGrupoH">
+          <tr>
+            <td (click)="onSelected(equipo)">{{equipo.name}}</td>
+            <td>{{equipo.goals_for}}</td>
+            <td>{{equipo.goals_against}}</td>
+            <td>{{equipo.goal_differential}}</td>
+            <td>{{equipo.group_points}}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+          </tr>
+      </table>
+    </div>
+  </div>
+</div>

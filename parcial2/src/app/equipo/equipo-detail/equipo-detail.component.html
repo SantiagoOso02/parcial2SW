@@ -1,0 +1,40 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{ equipoDetail.name }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{ equipoDetail.country }}</h6>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <span class="font-weight-bold">Partidos Jugados:</span>
+        <span>{{ equipoDetail.games_played }}</span>
+      </li>
+      <li class="list-group-item">
+        <span class="font-weight-bold">Victorias:</span>
+        <span>{{ equipoDetail.wins }}</span>
+      </li>
+      <li class="list-group-item">
+        <span class="font-weight-bold">Derrotas:</span>
+        <span>{{ equipoDetail.losses }}</span>
+      </li>
+      <li class="list-group-item">
+        <span class="font-weight-bold">Empates:</span>
+        <span>{{ equipoDetail.draws }}</span>
+      </li>
+      <li class="list-group-item">
+        <span class="font-weight-bold">Goles a favor:</span>
+        <span>{{ equipoDetail.goals_for }}</span>
+      </li>
+      <li class="list-group-item">
+        <span class="font-weight-bold">Goles en contra:</span>
+        <span>{{ equipoDetail.goals_against }}</span>
+      </li>
+      <li class="list-group-item">
+        <span class="font-weight-bold">Diferencia de goles:</span>
+        <span>{{ equipoDetail.goal_differential }}</span>
+      </li>
+      <li class="list-group-item">
+        <span class="font-weight-bold">Puntos:</span>
+        <span>{{ equipoDetail.group_points }}</span>
+      </li>
+    </ul>
+  </div>
+</div>

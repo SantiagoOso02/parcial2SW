@@ -14,7 +14,7 @@ export class PartidoService {
 
   constructor(private http: HttpClient) { }
 
-  getBooks(): Observable<Partido[]> {
+  getPartidos(): Observable<Partido[]> {
     return this.http.get<Partido[]>(this.apiUrl);
   }
 

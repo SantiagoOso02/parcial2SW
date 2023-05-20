@@ -1,3 +1,88 @@
-<p>
-  partido-list works!
-</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+      <div class="containerHead">
+        <h1>Lista de partidos</h1>
+      </div>
+      <div class="containerBody">
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th>#</th>
+                <th>Equipo local</th>
+                <th>Equipo Visitante</th>
+                <th>Marcador</th>
+                <th>Ganador</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let partido of partidos">
+              <tr>
+                <td><strong>{{partido.id}}</strong></td>
+                <td>
+                  <ng-container *ngIf="partido.home_team.name === 'To Be Determined'">
+                    Equipo pendiente a definir
+                  </ng-container>
+                  <ng-container *ngIf="partido.home_team.name !== 'To Be Determined'">
+                    {{partido.home_team.name}}
+                  </ng-container>
+                </td>
+                <td>
+                  <ng-container *ngIf="partido.away_team.name === 'To Be Determined'">
+                    Equipo pendiente a definir
+                  </ng-container>
+                  <ng-container *ngIf="partido.away_team.name !== 'To Be Determined'">
+                    {{partido.away_team.name}}
+                  </ng-container>
+                </td>
+                <td>
+                  <ng-container *ngIf="partido.status === 'future_scheduled'">
+                    Marcador pendiente a definir
+                  </ng-container>
+                  <ng-container *ngIf="partido.status !== 'future_scheduled' && partido.status !== 'future_unscheduled'">
+                    {{ partido.home_team.goals + '-' + partido.away_team.goals }}
+                  </ng-container>
+                </td>
+                <td>
+                  <ng-container *ngIf="partido.status === 'future_scheduled'">
+                    Ganador pendiente a definir
+                  </ng-container>
+                  <ng-container *ngIf="partido.status !== 'future_scheduled'">
+                    {{ partido.winner }}
+                  </ng-container>
+                </td>
+                <td>{{ partido.status }}</td>
+
+              </tr>
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </table>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="containerHead">
+        <h1>Países con más goles de local</h1>
+      </div>
+      <div class="containerBody">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th>País</th>
+              <th>Goles</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let country of topScoringCountries">
+              <td>{{ country.name }}</td>
+              <td>{{ country.goals }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
